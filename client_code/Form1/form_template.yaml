@@ -1,0 +1,103 @@
+container:
+  type: ColumnPanel
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: small, spacing_above: none, col_widths: '{}', spacing_below: none,
+    background: 'theme:Primary 700'}
+  event_bindings: {show: form_show}
+components:
+- type: Link
+  properties: {role: headline, url: 'https://real-vs-fake.anvil.app/', align: left,
+    tooltip: '', border: '', foreground: '', visible: true, text: '     Real or Fake?',
+    font_size: null, wrap_on: mobile, font: '', col_spacing: medium, spacing_above: none,
+    icon_align: left, col_widths: '', spacing_below: none, italic: false, background: '',
+    bold: false, underline: false, icon: ''}
+  name: home_link
+  layout_properties:
+    col_widths: {}
+    grid_position: BAVVXQ,QXSKID
+    full_width_row: true
+    row_background: theme:Primary 500
+  event_bindings: {click: home_link_click, hide: home_link_hide}
+- type: Image
+  properties: {height: 33}
+  name: image_1
+  layout_properties: {grid_position: 'ADOMZV,PGZRJU'}
+- type: ColumnPanel
+  properties: {role: rounded-border, tooltip: '', border: white, foreground: white,
+    visible: true, wrap_on: mobile, col_spacing: none, spacing_above: medium, col_widths: '{}',
+    spacing_below: medium, background: 'theme:Primary 500'}
+  name: column_panel_1
+  layout_properties: {grid_position: 'KSWAPP,WCTJPU', full_width_row: false}
+  components:
+  - type: Image
+    properties: {role: rounded-border, vertical_align: center, height: '300', tooltip: '',
+      border: '', foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: large,
+      source: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAYAAAA+s9J6AAAAAXNSR0IArs4c6QAADjVJREFUeF7tnWtP1EwUgGcVEDQK8RIkgIBAjHzw//8UFQUVCaKRRI2C4C2nWlLqsjs9Pbtz6dMvvsnbmU6fOQ9nOp2d9l6+fPnbcUAAAsEI9JAwGHsuDIGCABISCBAITAAJA3cAl4cAEhIDEAhMAAkDdwCXhwASEgMQCEwACQN3AJeHABISAxAITAAJA3cAl4cAEhIDEAhMAAkDdwCXhwASEgMQCEwACQN3AJeHABISAxAITAAJA3cAl4cAEhIDEAhMAAkDdwCXhwASEgMQCEwACQN3AJeHABISAxAITAAJA3cAl4cAEhIDEAhMAAkDdwCXhwASEgMQCEwACQN3AJeHABISAxAITAAJA3cAl4cAEhIDEAhMAAkDdwCXhwASEgMQCEwACQN3AJcPS+D379+u1+sFbURwCQXCz58/3cTERFAQXLx7BE5PT93U1JQLLWJwCaXr9/b23Pz8fAGEAwLjICACHh4euuXl5XFcbuA1opCwKuLMzIz78eNH8CFC8J6hASMjEJOAcpPRSCiN2d3dLf4yXbt2rRiickDAmoD8gT84OIgiA5b3FpWEDE2tQ476qgRiy4DRSoiIiDMKAjFmwKglrD8jMjQdRVjmX6fMesqs+/fv34vJv7W1tShvOrrhaJUSs6ZRxkwyjbp69ao7Pj6OZhb0MnDRSVh/Z4OIycR8dA2N9RmwDio6Cfv1JCJGF99RNyiVDBj9M2GZEct/RcSFhQVW1kQd/nE0rsyAq6urSbzqSiITll1bZkR5oS+TNaGXG8URcrQihdcQg3opKQl5fYFwgwiUryGWlpaSWnGVhIT1jCcraxYXF1lripPnBFKZhOnXZUlIyGQNtg0ikLKAcl9JSdjv9QWTNd0VVGZB5UV8bGtBm/ZIUhJWb65cDfHixYvzoSkTNU27P93zy9cQ+/v7bmNjI4lZ0GRe1jcJi+rrC36P2IRc2uem9h5wGO1kM2H9xsqfQfEL/WFdnv7/l1nQmNeCNiWcjYTy15GhadPuT+/81CdhspodvSx8WOKWnli+Lc5RwORmR307CxF9ScV/Xvncn9sQtEo+m+Go3FR1drS+xC3+cKOFlxHINQOW95uVhPVOZNF3+mLnLmC2w9Fq6LHELV0RuyBgthLy0j5d8brY8qyHo13sUO45PQJImF6f0eLMCCBhZh3K7aRHAAnT6zNanBkBJMysQ7md9AggYXp9RoszI4CEmXUot5MeASRMr89ocWYEkDCzDuV20iOAhOn1GS3OjAASZtah3E56BJAwvT6jxZkRQMLMOpTbSY8AEqbXZ7Q4MwJImFmHcjvpEUDC9PqMFmdGAAkz61BuJz0CSJhen9HizAggYWYdyu2kRwAJFX0mu31z9CcgX1DmaEYACZvxcp8+fXJfvnw53+NUNpXi+EtgcnLSzc3NuRs3biT9laRx9ycSehKXHaB3dnbc2dmZIxNeDk0y4a1bt9zy8rInWU5DQo8YkGy3vb3tfv365XE2p4iIs7OzbmVlhYzoEQ5I6AHp48eP7t27d2RAD1blKSLi5uamm5qaalCqm6ci4ZB+l6Hnq1ev3NevXy+cyQTE/+Cqw3Ths7S05G7fvk02HBJjSOghoXz3UL6NXv0rv76+7uSDpAxRnbty5UoxYVUdLYiE9+/fd3fu3Olmemtw10iolHBra8v1er0GqPM9VTLg0dGRe/v27fmQHQn9+xsJkdA/WgacKZkQCXUokRAJdZFTK4WEeoxIiIT66KmUREI9RiREQn30IKEJOyTsgIT1VwcmkcNw1AwjEmYqoYh3fHxczFrKv3LI2s6bN28Wq1msD4ajeqJImKmEMlMpYtTXucqrA5HxwYMHbnp6Wh85ZEIzdkiYoYS7u7vu27dvA5fZiYyy4MBKRDKh3kkkzEhCyXr7+/tO1rr6/tLj0aNHJosOkBAJ9QQyklB+bvXs2TNvAS1XtSChPgTJhBlJWBfBJyxk3efjx49bL7JGQh/a/c9Bwkwk1AxF5dYlGz558gQJ9Q61LomESIiErTVqVwESZiKh3AbD0XYyhCqNhBlJqJmYkd/7ye/+2h48E+oJImFGEsqtXPaSvt9tyvOgvKKQHye3PZBQTxAJA0som0hZ/zj4+fPnQ3/xX24/YbWEDQmRUE8gsIRyeRlGWmSj8lakvtevX7uTk5NL3xkuLCwU+7/IuRZ/BJBQH4JkwsASnp6eFvuZyqa5Fs9m1dsRMT5//ny+gFteY8jGvHfv3jWVvt+kkOVCAH14p1ESCQNKKFlINpGSQ4L2+vXrbnV11SQzlcNcEa/cGa7639bhSSbUE0XCQBKWGbDf5R8+fOhmZmZav0CXuqvPnKN4/izbj4RIqCcQQMJBApZZMbU9O5FQH4JkwjFLWB2CDrq0DCHlHd7i4qJJRtSHyMWSMqSVPVjrE0lIqCeMhGOUcFgGrDdFRJTf+8nw1GIGUx8mf0uKgO/fvy8mezY2Ni7MrCKhni4SjknCpgLWmyUTNiE/OSbPk7IQQASUry5Je6qvN5AQCfUERihhORHiOwQdNjwN8Zwo2U++w/HmzZvzBQDyxwAJ7UKOTDhCCaXqthmw2rzyOdH6feIgBP2+SIWEdgJKTUg4QgktBSybWb5PlI9wWq6yqWOQLC5fo+q3Vw0SIqEtgRFJOAoBq02VX8TLjmnWz4n9hp91REhoG4JkwhFIOGoBq1nR8jmxnP2sfuJMZK9//g0JkdCWgLGE4xKwKqL2fWJ9NU05+zlspzYktA1BMqGhhBazoJrubbPutBx+yvOf74GEvqT8zkNCQwmfPn3qR32EZzV5n9hv+OnTNCT0oeR/DhIaSShDO9nzM/Th+6346sv3YcNPJmZG26tImJmEcjuD1p1qhp9IiISjJZChhDKjeXZ2Vqw7XVlZOX+fqB1+IuFoQ5BMmKGE9VuS50QRcm9vr1j7KTL2e/XgG2o8E/qS8jsPCTsgodxiG+nIhH4yac9Cwo5IqA2QfuXIhJY0WTs6lKYM3WQfGPkha3nIxMfW1taF3/jFMjs69IYMTkBCA4iVKsiEZMLGEYWEjZENLICESNg4opCwMTIkbIOM4ej/9JCwTUT9X5ZMSCZsHFFI2BgZmbANMjIhmbBN/PiUJROSCX3i5MI5ZMLGyMiEbZCRCcmEbeLHpyyZkEzoEydkwsaU/AsgIRL6R8u/MxmONkbGcLQNMoajDEfbxI9PWTIhmdAnThiONqbkXwAJDSXc3t72J5/wmfLZNvl5VPndQ7kVtsHXdygSGkko1Yzy+3/6Lh5PSSTUc0ZCQwn13ZB+SSTU9yESIqE+eiolkVCPEQmRUB89/0rKDPLR0VHx6bRy5zZ5XpQP18jGxByDCSChUsL19fViywiOv1tnSCb88OHDOQ4k9I8MJPSQUHanlm/0VY/qzKA/7nzPrO5dWu5nc+/ePTKhR5cjoYeE8ono6kdSPLh29pRSQPkjtbm56aampjrLwvfGkdCDlLx6kHeA9a8TeRTtzCnV3dxEwNnZ2WLPU0YMw0MACYczKs6Qj73s7OwUm+o23Tbe8xJZnCbSyTft5SOmHH4EkNCP0/lZ8vno4+Pj4sU8x0UCk5OTbm5uzvzDpblzRsKGPUwWvBwYQ8+GwfTvdCTUcaMUBMwIIKEZSiqCgI4AEuq4UQoCZgSQ0AwlFUFARwAJddwoBQEzAkhohpKKIKAjgIQ6bpSCgBkBJDRDSUUQ0BFAQh03SkHAjAASmqGkIgjoCCChjhulIGBGAAnNUFIRBHQEkFDHjVIQMCOAhGYoqQgCOgJIqONGKQiYEUBCM5RUBAEdASTUcaMUBMwIIKEZSiqCgI4AEuq4UQoCZgSyl/Dk5MRNT0+bAaOi8RLoQv9lLeHp6ak7PDx0S0tLrtfrjTd6uFprArKjnXzfYn5+PutNhLOUUHZEk23r5dsI7H/Z2oUgFVS/9bi3t5e1iNlJKALKvqCSAREwiD+mFy1lFBEXFhbcxMREUX9OH2TNSsJSwP39fbe2tmYaDFQWnsDu7m7xh1VERMLw/fFfC8iAEXaKQZPqsuU4NM0mE8q3Ig4ODhiCGgR+7FVUh6Y5ZMQsJJRZUBmCbmxsFB9uYSY0do307Sulk6Hp4uJiFrOmyUtYvoZgEkYf2KmWLIemMzMzSX+CLWkJGYKmqk+7dleHoNXJmna1hiudrIRlBlxdXU36r2C4rs/jyjIhJ58zT/mFfpISMgTNQyDLu0h5aJqchOUkDO8BLUM4zbrqM6OpDk2TkpAMmKYs42p1qkPTZCREwHGFcrrXqS5xk2fEVGZNk5CQWdB0xQjV8pSGptFLyCxoqDBO87plNkxpaBq1hAxB0xQhZKsvW2sa89A0SglZjB0yjPO7duyvL6KUkAyYnwgh7iiVoWl0EiJgiHDtxjVjzYhRScgsaDdkCHmXMYoYjYRkwJCh2a1rx/bD4CgkRMBuSRDD3cYkYnAJGYLGEJLdaEO/1xfVzaNCUQguodx4DlsUhOpArqsnEEvcBZUwFgj6bqRkqgRiir2gEqbagbQbApYEkNCSJnVBQEEACRXQKAIBSwJIaEmTuiCgIICECmgUgYAlASS0pEldEFAQQEIFNIpAwJIAElrSpC4IKAggoQIaRSBgSQAJLWlSFwQUBJBQAY0iELAkgISWNKkLAgoCSKiARhEIWBJAQkua1AUBBQEkVECjCAQsCSChJU3qgoCCABIqoFEEApYEkNCSJnVBQEEACRXQKAIBSwJIaEmTuiCgIICECmgUgYAlASS0pEldEFAQQEIFNIpAwJIAElrSpC4IKAggoQIaRSBgSQAJLWlSFwQUBJBQAY0iELAkgISWNKkLAgoCSKiARhEIWBJAQkua1AUBBQEkVECjCAQsCfwBC1i1bLW3ITYAAAAASUVORK5CYII=',
+      spacing_below: large, background: '', horizontal_align: center}
+    name: upload_image
+    layout_properties: {grid_position: 'GUURHP,SPDDBV LATJDX,PNITAQ', full_width_row: true}
+  - type: Button
+    properties: {role: secondary-color, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Clear, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: large, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: primary_color_2
+    layout_properties: {grid_position: 'GUURHP,SPDDBV WQJEYL,JJZZAE'}
+    event_bindings: {click: primary_color_2_click}
+  - type: Spacer
+    properties: {visible: true, spacing_above: small, spacing_below: small, height: 90,
+      tooltip: ''}
+    name: spacer_1
+    layout_properties:
+      col_widths: {}
+      grid_position: GUURHP,MCCTBO DFARIC,TCPRYS
+  - type: FileLoader
+    properties:
+      role: null
+      show_state: true
+      align: center
+      tooltip: ''
+      border: ''
+      file_types: image/*
+      enabled: true
+      files: []
+      foreground: ''
+      visible: true
+      text: Upload Image
+      font_size: 22
+      font: ''
+      spacing_above: medium
+      icon_align: left
+      spacing_below: medium
+      italic: false
+      file: null
+      background: white
+      bold: false
+      underline: false
+      multiple: false
+      icon: fa:upload
+    name: file_loader_1
+    layout_properties: {grid_position: 'GUURHP,MCCTBO OHPWKI,AOTUDS', full_width_row: true}
+    event_bindings: {change: file_loader_1_change}
+  - type: Button
+    properties: {role: secondary-color, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Classify Image, font_size: 22, font: '',
+      spacing_above: medium, icon_align: left, spacing_below: medium, italic: false,
+      background: '', bold: false, underline: false, icon: 'fa:desktop'}
+    name: primary_color_1
+    layout_properties: {grid_position: 'GUURHP,MCCTBO UZFCYL,CWCSTQ', full_width_row: true}
+    event_bindings: {click: primary_color_1_click}
+  - type: RichText
+    properties: {role: rounded-border, align: center, tooltip: '', enable_slots: false,
+      border: '', foreground: '', visible: true, font_size: 22, content: 'Real or
+        fake?', font: '', spacing_above: medium, spacing_below: medium, data: null,
+      background: '', format: plain_text}
+    name: rich_text_1
+    layout_properties: {grid_position: 'GUURHP,MCCTBO QKAWCO,UQMNPW', full_width_row: true}
+- type: Image
+  properties: {height: 33}
+  name: image_1_copy
+  layout_properties:
+    col_widths: {}
+    grid_position: DSYXNV,UDUNNG
+is_package: true
